@@ -40,6 +40,7 @@ python -m pip install --upgrade pip
 
 ```shell
 pip install pymysql
+pip install Pillow
 pip install pyinstaller
 ```
 
@@ -55,6 +56,7 @@ pip freeze > requirements.txt
 altgraph==0.17
 future==0.18.2
 pefile==2019.4.18
+Pillow==7.0.0
 PyInstaller==3.6
 PyMySQL==0.9.3
 pywin32-ctypes==0.2.0

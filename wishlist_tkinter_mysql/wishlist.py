@@ -9,8 +9,13 @@ from tkinter import *
 import tkinter.ttk as ttk
 import tkinter.messagebox as tkMessageBox
 import pymysql
+from icon_app import file_png
 
 root = Tk()
+
+icon = PhotoImage(file=r'icon.png')
+root.tk.call('wm', 'iconphoto', root._w, icon)
+
 root.title("Вишлист")
 screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
@@ -157,8 +162,8 @@ Forms.pack(side=TOP)
 Buttons = Frame(Left, width=300, height=100, bd=2, relief="raise")
 Buttons.pack(side=BOTTOM)
 RadioGroup = Frame(Forms)
-Male = Radiobutton(RadioGroup, text="в наличии", variable=STATUS, value="в наличии", font=('arial', 16)).pack(side=LEFT)
-Female = Radiobutton(RadioGroup, text="скоро появится", variable=STATUS, value="скоро появится", font=('arial', 16)).pack(side=LEFT)
+InStock = Radiobutton(RadioGroup, text="в наличии", variable=STATUS, value="в наличии", font=('arial', 16)).pack(side=LEFT)
+Soon = Radiobutton(RadioGroup, text="скоро появится", variable=STATUS, value="скоро появится", font=('arial', 16)).pack(side=LEFT)
 
 #==================================LABEL WIDGET=======================================
 txt_title = Label(Top, width=900, font=('arial', 24), text = "Вишлист")
